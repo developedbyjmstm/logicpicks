@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct JSON Viewer</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0A2625 0%, #103F3E 100%);
+            color: #fff;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .output-section {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #9A7701;
+            border-bottom: 2px solid #9A7701;
+            padding-bottom: 8px;
+        }
+
+        .results {
+            margin-bottom: 15px;
+            color: #B5C3C3;
+            font-style: italic;
+        }
+
+        .json-output {
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 13px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border-radius: 5px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="output-section">
+            <h2>LOGICPICKS SYSTEM CONTROL</h2>
+
+            <div class="results">
+                JSON carregado diretamente (sem parsing, sem injection)
+            </div>
+
+            <div class="json-output" id="jsonOutput"></div>
+        </div>
+    </div>
+
+    <script>
+        // JSON direto (hardcoded)
+        const data = [
+            {
+                "interstitialads1": "true",
+                "rewardedads1": "true",
+                "interstitialads2": "true",
+                "rewardedads2": "true",
+                "interstitialads3": "true",
+                "rewardedads3": "true",
+                "interstitialads4": "true",
+                "rewardedads4": "true",
+                "interstitialads5": "true",
+                "rewardedads5": "true",
+                
+                "openappads": "false",
+                
+                "fab": "true",
+                
+                "webview1": "true",
+                "webview2": "true",
+                "webview3": "true",
+                "webview4": "true",
+                "webview5": "true",
+                "webview6": "true",
+                "webview7": "true",
+                "webview8": "true",
+                "webview9": "true",
+                "webview10": "true",
+                
+                
+  "dialog1": "true",
+  "dialog2": "true",
+  "dialog3": "true",
+  "dialog4": "true",
+  "dialog5": "true",
+  
+  "dialog1button1": "true",
+  "dialog1button2": "true",
+  "dialog1button3": "true",
+  "dialog1button4": "true",
+  "dialog1button5": "true",
+  "dialog1button6": "true",
+  "dialog1button7": "true",
+  "dialog1button8": "true",
+  "dialog1button9": "true",
+  "dialog1button10": "true",
+  "dialog1button11": "true",
+  "dialog1button12": "true",
+  "dialog1button13": "true",
+  "dialog1button14": "true",
+  "dialog1button15": "true",
+  "dialog1button16": "true",
+  "dialog1button17": "true",
+  "dialog1button18": "true",
+  "dialog1button19": "true",
+  "dialog1button20": "true",
+  
+  "dialog2button1": "true",
+  "dialog2button2": "true",
+  "dialog2button3": "true",
+  "dialog2button4": "true",
+  "dialog2button5": "true",
+  "dialog2button6": "true",
+  "dialog2button7": "true",
+  "dialog2button8": "true",
+  "dialog2button9": "true",
+  "dialog2button10": "true",
+  "dialog2button11": "true",
+  "dialog2button12": "true",
+  "dialog2button13": "true",
+  "dialog2button14": "true",
+  "dialog2button15": "true",
+  "dialog2button16": "true",
+  "dialog2button17": "true",
+  "dialog2button18": "true",
+  "dialog2button19": "true",
+  "dialog2button20": "true",
+               
+  "dialog3button1": "true",
+  "dialog3button2": "true",
+  "dialog3button3": "true",
+  "dialog3button4": "true",
+  "dialog3button5": "true",
+  "dialog3button6": "true",
+  "dialog3button7": "true",
+  "dialog3button8": "true",
+  "dialog3button9": "true",
+  "dialog3button10": "true",
+  "dialog3button11": "true",
+  "dialog3button12": "true",
+  "dialog3button13": "true",
+  "dialog3button14": "true",
+  "dialog3button15": "true",
+  "dialog3button16": "true",
+  "dialog3button17": "true",
+  "dialog3button18": "true",
+  "dialog3button19": "true",
+  "dialog3button20": "true",
+  
+  "dialog4button1": "true",
+  "dialog4button2": "true",
+  "dialog4button3": "true",
+  "dialog4button4": "true",
+  "dialog4button5": "true",
+  "dialog4button6": "true",
+  "dialog4button7": "true",
+  "dialog4button8": "true",
+  "dialog4button9": "true",
+  "dialog4button10": "true",
+  "dialog4button11": "true",
+  "dialog4button12": "true",
+  "dialog4button13": "true",
+  "dialog4button14": "true",
+  "dialog4button15": "true",
+  "dialog4button16": "true",
+  "dialog4button17": "true",
+  "dialog4button18": "true",
+  "dialog4button19": "true",
+  "dialog4button20": "true",
+  
+  "dialog5button1": "true",
+  "dialog5button2": "true",
+  "dialog5button3": "true",
+  "dialog5button4": "true",
+  "dialog5button5": "true",
+  "dialog5button6": "true",
+  "dialog5button7": "true",
+  "dialog5button8": "true",
+  "dialog5button9": "true",
+  "dialog5button10": "true",
+  "dialog5button11": "true",
+  "dialog5button12": "true",
+  "dialog5button13": "true",
+  "dialog5button14": "true",
+  "dialog5button15": "true",
+  "dialog5button16": "true",
+  "dialog5button17": "true",
+  "dialog5button18": "true",
+  "dialog5button19": "true",
+  "dialog5button20": "true",
+                
+  "button1": "true",
+  "button2": "true",
+  "button3": "true",
+  "button4": "true",
+  "button5": "true",
+  "button6": "true",
+  "button7": "true",
+  "button8": "true",
+  "button9": "true",
+  "button10": "true",
+  "button11": "true",
+  "button12": "true",
+  "button13": "true",
+  "button14": "true",
+  "button15": "true",
+  "button16": "true",
+  "button17": "true",
+  "button18": "true",
+  "button19": "true",
+  "button20": "true",
+  
+                "optionmenu1": "true",
+                "optionmenu2": "true",
+                "optionmenu3": "true",
+                "optionmenu4": "true",
+                "optionmenu5": "true",
+                "optionmenu6": "true",
+                "optionmenu7": "true",
+                "optionmenu8": "true",
+                "optionmenu9": "true",
+                "optionmenu10": "true",
+                "optionmenu11": "true",
+                "optionmenu12": "true",
+                "optionmenu13": "true",
+                "optionmenu14": "true",
+                "optionmenu15": "true",
+                "optionmenu16": "true",
+                "optionmenu17": "true",
+                "optionmenu18": "true",
+                "optionmenu19": "true",
+                "optionmenu20": "true",
+                
+  "optionmenu1title": "OPTION MENU 1",
+  "optionmenu2title": "OPTION MENU 2",
+  "optionmenu3title": "OPTION MENU 3",
+  "optionmenu4title": "OPTION MENU 4",
+  "optionmenu5title": "OPTION MENU 5",
+  "optionmenu6title": "OPTION MENU 1",
+  "optionmenu7title": "OPTION MENU 1",
+  "optionmenu8title": "OPTION MENU 1",
+  "optionmenu9title": "OPTION MENU 1",
+  "optionmenu10title": "OPTION MENU 1",
+  "optionmenu11title": "OPTION MENU 1",
+  "optionmenu12title": "OPTION MENU 1",
+  "optionmenu13title": "OPTION MENU 1",
+  "optionmenu14title": "OPTION MENU 1",
+  "optionmenu15title": "OPTION MENU 1",
+  "optionmenu16title": "OPTION MENU 1",
+  "optionmenu17title": "OPTION MENU 1",
+  "optionmenu18title": "OPTION MENU 1",
+  "optionmenu19title": "OPTION MENU 1",
+  "optionmenu20title": "OPTION MENU 1"
+
+                
+            }
+        ];
+
+        // Mostrar JSON formatado
+        document.getElementById("jsonOutput").textContent =
+            JSON.stringify(data, null, 2);
+    </script>
+</body>
+</html>
