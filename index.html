@@ -62,10 +62,10 @@
 <body>
     <div class="container">
         <div class="output-section">
-            <h2>LOGICPICKS SYSTEM CONTROL</h2>
+            <h2>DEVELOPEDBYJMS™ SYSTEM CONTROL</h2>
 
             <div class="results">
-                JSON carregado diretamente (sem parsing, sem injection)
+                
             </div>
 
             <div class="json-output" id="jsonOutput"></div>
@@ -76,39 +76,67 @@
         // JSON direto (hardcoded)
         const data = [
             {
+            
+            "appversion": "655.600",
+                "playstorelink": "https://play.google.com/store/apps/details?id=com.developedbyjms.logicpicks",
+            
+             
+                // NOTIFICATION 
+                "shownotificationdialog": "false",
+                "shownotificationtopbar": "false",
+                "notificationtitle": "NOVA VERSÃO DA APP",
+                "notificationmessage": "OLÁ USUÁRIO GOSTARIMOS DE INFORMALO QUE JA SE ENCONTRA DISPONÍVEL UMA NOVA VERSÃO DA APP NA PLAYSTORE.",
+                
+                
+            
                 "interstitialads1": "true",
-                "rewardedads1": "true",
                 "interstitialads2": "true",
-                "rewardedads2": "true",
-                "interstitialads3": "true",
-                "rewardedads3": "true",
-                "interstitialads4": "true",
-                "rewardedads4": "true",
-                "interstitialads5": "true",
-                "rewardedads5": "true",
+                "rewardedads1": "true",
+                "openappads": "true",
+                "bannerads": "false",
                 
-                "openappads": "false",
+                "interstitialads1hide": "xx, yy",
+                "interstitialads2hide": "xx, yy",
+                "rewardedads1hide": "xx, yy",
+                "openappadshide": "xx, yy",
+                "banneradshide": "xx, yy",
                 
-                "fab": "true",
+                // ads frequency 
+                 "interstitialads1frequency": "260000",
+                 "interstitialads2frequency": "260000",
+                "rewardedads1frequency": "60000",
+                "openappadsfrequency": "3600000",
+                "callinterstitialads1afterxyclicks": "2",
+                 "callinterstitialads2afterxyclicks": "4",
+              
+              "toolbartitle": "LOGICPICKS",  
+              "oninitloaddata": "37",  //default 3, it starts from 3
+   //From 1 to 5
+  "toolbaricon": "1",
+  
+  "toolbartextsize": "20",
+  
+  // From 1 to 5
+  "optionmenu1icon": "1",
+  
+  // From 1 to 5
+  "optionmenu2icon": "1",
                 
                 "webview1": "true",
                 "webview2": "true",
                 "webview3": "true",
                 "webview4": "true",
                 "webview5": "true",
-                "webview6": "true",
-                "webview7": "true",
-                "webview8": "true",
-                "webview9": "true",
-                "webview10": "true",
                 
+                "listview1": "false",
+                "fab": "false",
+               
                 
+  // DIALOG 1 AND 2 CONTROL
   "dialog1": "true",
   "dialog2": "true",
-  "dialog3": "true",
-  "dialog4": "true",
-  "dialog5": "true",
   
+  // DIALOG 1 VISIBILITY 
   "dialog1button1": "true",
   "dialog1button2": "true",
   "dialog1button3": "true",
@@ -121,15 +149,22 @@
   "dialog1button10": "true",
   "dialog1button11": "true",
   "dialog1button12": "true",
-  "dialog1button13": "true",
-  "dialog1button14": "true",
-  "dialog1button15": "true",
-  "dialog1button16": "true",
-  "dialog1button17": "true",
-  "dialog1button18": "true",
-  "dialog1button19": "true",
-  "dialog1button20": "true",
+  // Dialog 1 TITLE
+  "dialog1title": "VIP TICKETS • LOGICPICKS",
+  "dialog1button1title": "VIP SBPGP TOP TODAY",
+  "dialog1button2title": "VIP SBPGP PICKS TODAY",
+  "dialog1button3title": "VIP SBPGP TOP YESTERDAY",
+  "dialog1button4title": "VIP SBPGP PICKS YESTERDAY",
+  "dialog1button5title": "VIP MIA.K TODAY",
+  "dialog1button6title": "VIP MIA.K YESTERDAY",
+  "dialog1button7title": "VIP OVER•FLOW DC TODAY",
+  "dialog1button8title": "VIP OVER•FLOW DC YESTERDAY",
+  "dialog1button9title": "VIP P•POWER OVER 1.5 TODAY",
+  "dialog1button10title": "VIP P•POWER OVER 1.5 YESTERDAY",
+  "dialog1button11title": "VIP BTTS/GG TODAY",
+  "dialog1button12title": "VIP BTTS/GG YESTERDAY",
   
+  // DIALOG 2 VISIBILITY 
   "dialog2button1": "true",
   "dialog2button2": "true",
   "dialog2button3": "true",
@@ -138,144 +173,140 @@
   "dialog2button6": "true",
   "dialog2button7": "true",
   "dialog2button8": "true",
-  "dialog2button9": "true",
-  "dialog2button10": "true",
-  "dialog2button11": "true",
-  "dialog2button12": "true",
-  "dialog2button13": "true",
-  "dialog2button14": "true",
-  "dialog2button15": "true",
-  "dialog2button16": "true",
-  "dialog2button17": "true",
-  "dialog2button18": "true",
-  "dialog2button19": "true",
-  "dialog2button20": "true",
+  "dialog2button9": "false",
+  "dialog2button10": "false",
+  // Dialog 2 TITLE
+  "dialog2title": "DAILY TICKETS • LOGICPICKS",
+  "dialog2button1title": "TICKET [OVER 1.5] TODAY",
+  "dialog2button2title": "TICKET [OVER 1.5] YESTERDAY",
+  "dialog2button3title": "D.STYLË OVER 1.5 TODAY",
+  "dialog2button4title": "D.STYLË OVER 1.5 YESTERDAY",
+  "dialog2button5title": "TICKET [DOUBLE CHANCE] TODAY",
+  "dialog2button6title": "TICKET [DOUBLE CHANCE] YESTERDAY",
+  "dialog2button7title": "TICKET [MIXED MARKETS] TODAY",
+  "dialog2button8title": "TICKET [MIXED MARKETS] YESTERDAY",
+  "dialog2button9title": "TITLE9",
+  "dialog2button10title": "TITLE10",
+  
                
-  "dialog3button1": "true",
-  "dialog3button2": "true",
-  "dialog3button3": "true",
-  "dialog3button4": "true",
-  "dialog3button5": "true",
-  "dialog3button6": "true",
-  "dialog3button7": "true",
-  "dialog3button8": "true",
-  "dialog3button9": "true",
-  "dialog3button10": "true",
-  "dialog3button11": "true",
-  "dialog3button12": "true",
-  "dialog3button13": "true",
-  "dialog3button14": "true",
-  "dialog3button15": "true",
-  "dialog3button16": "true",
-  "dialog3button17": "true",
-  "dialog3button18": "true",
-  "dialog3button19": "true",
-  "dialog3button20": "true",
   
-  "dialog4button1": "true",
-  "dialog4button2": "true",
-  "dialog4button3": "true",
-  "dialog4button4": "true",
-  "dialog4button5": "true",
-  "dialog4button6": "true",
-  "dialog4button7": "true",
-  "dialog4button8": "true",
-  "dialog4button9": "true",
-  "dialog4button10": "true",
-  "dialog4button11": "true",
-  "dialog4button12": "true",
-  "dialog4button13": "true",
-  "dialog4button14": "true",
-  "dialog4button15": "true",
-  "dialog4button16": "true",
-  "dialog4button17": "true",
-  "dialog4button18": "true",
-  "dialog4button19": "true",
-  "dialog4button20": "true",
-  
-  "dialog5button1": "true",
-  "dialog5button2": "true",
-  "dialog5button3": "true",
-  "dialog5button4": "true",
-  "dialog5button5": "true",
-  "dialog5button6": "true",
-  "dialog5button7": "true",
-  "dialog5button8": "true",
-  "dialog5button9": "true",
-  "dialog5button10": "true",
-  "dialog5button11": "true",
-  "dialog5button12": "true",
-  "dialog5button13": "true",
-  "dialog5button14": "true",
-  "dialog5button15": "true",
-  "dialog5button16": "true",
-  "dialog5button17": "true",
-  "dialog5button18": "true",
-  "dialog5button19": "true",
-  "dialog5button20": "true",
-                
-  "button1": "true",
-  "button2": "true",
-  "button3": "true",
-  "button4": "true",
-  "button5": "true",
-  "button6": "true",
-  "button7": "true",
-  "button8": "true",
-  "button9": "true",
-  "button10": "true",
-  "button11": "true",
-  "button12": "true",
-  "button13": "true",
-  "button14": "true",
-  "button15": "true",
-  "button16": "true",
-  "button17": "true",
-  "button18": "true",
-  "button19": "true",
-  "button20": "true",
   
                 "optionmenu1": "true",
                 "optionmenu2": "true",
-                "optionmenu3": "true",
-                "optionmenu4": "true",
+                //MATCHOUTLOOCK
+                "optionmenu3": "false",
+                "optionmenu4": "false",
+                //PRIMA
                 "optionmenu5": "true",
-                "optionmenu6": "true",
-                "optionmenu7": "true",
-                "optionmenu8": "true",
-                "optionmenu9": "true",
+                "optionmenu6": "false",
+                "optionmenu7": "false",
+                "optionmenu8": "false",
+                "optionmenu9": "false",
                 "optionmenu10": "true",
-                "optionmenu11": "true",
-                "optionmenu12": "true",
-                "optionmenu13": "true",
-                "optionmenu14": "true",
-                "optionmenu15": "true",
-                "optionmenu16": "true",
-                "optionmenu17": "true",
-                "optionmenu18": "true",
-                "optionmenu19": "true",
-                "optionmenu20": "true",
+                //PASSION
+                "optionmenu11": "false",
+                "optionmenu12": "false",
+                "optionmenu13": "false",
+                "optionmenu14": "false",
+                "optionmenu15": "false",
+                "optionmenu16": "false",
+                "optionmenu17": "false",
+                "optionmenu18": "false",
+                "optionmenu19": "false",
+                "optionmenu20": "false",
+                "optionmenu21": "false",
+                "optionmenu22": "false",
+                //TFAME
+                "optionmenu23": "false",
+                "optionmenu24": "false",
+                "optionmenu25": "false",
+                "optionmenu26": "false",
+                //SUPERBETPRED
+                "optionmenu27": "false",
+                "optionmenu28": "false",
+                //LEGITPRED
+                "optionmenu29": "false",
+                "optionmenu30": "false",
+                "optionmenu31": "false",
+                "optionmenu32": "false",
+                "optionmenu33": "false",
+                "optionmenu34": "false",
+                //TFAME
+                "optionmenu35": "false",
+                "optionmenu36": "false",
+                //R2bet
+                "optionmenu37": "true",
+                "optionmenu38": "true",
+                "optionmenu39": "true",
+                "optionmenu40": "true",
+                "optionmenu41": "true",
+                "optionmenu42": "true",
+                "optionmenu43": "true",
+                "optionmenu44": "true",
+                "optionmenu45": "true",
+                //BTWID
+                "optionmenu46": "true",
                 
-  "optionmenu1title": "OPTION MENU 1",
-  "optionmenu2title": "OPTION MENU 2",
-  "optionmenu3title": "OPTION MENU 3",
-  "optionmenu4title": "OPTION MENU 4",
-  "optionmenu5title": "OPTION MENU 5",
-  "optionmenu6title": "OPTION MENU 1",
-  "optionmenu7title": "OPTION MENU 1",
-  "optionmenu8title": "OPTION MENU 1",
-  "optionmenu9title": "OPTION MENU 1",
-  "optionmenu10title": "OPTION MENU 1",
-  "optionmenu11title": "OPTION MENU 1",
-  "optionmenu12title": "OPTION MENU 1",
-  "optionmenu13title": "OPTION MENU 1",
-  "optionmenu14title": "OPTION MENU 1",
-  "optionmenu15title": "OPTION MENU 1",
-  "optionmenu16title": "OPTION MENU 1",
-  "optionmenu17title": "OPTION MENU 1",
-  "optionmenu18title": "OPTION MENU 1",
-  "optionmenu19title": "OPTION MENU 1",
-  "optionmenu20title": "OPTION MENU 1"
+                
+  "optionmenu1title": "VIP TICKETS",
+  "optionmenu2title": "DAILY TICKETS",
+  //MATCHOUTLOOCK 
+  "optionmenu3title": "TOP PICKS TODAY", // matchoutloock
+  "optionmenu4title": "TOP PICKS YESTERDAY", // matchoutloock
+  //PRIMA
+  "optionmenu5title": "OVER/UNDER 1.5", //prima
+  "optionmenu6title": "OVER/UNDER 2.5", //prima
+  "optionmenu7title": "OVER/UNDER 3.5", //prima
+  "optionmenu8title": "MIXED MARKETS", // prima
+  "optionmenu9title": "BOTH2SCORE", //prima
+  "optionmenu10title": "DOUBLE CHANCE", // prima 
+  //PASSION
+  "optionmenu11title": "TOP PICKS", //passion
+  "optionmenu12title": "TOP BANKER",//passion
+  "optionmenu13title": "HOME WIN",//passion
+  "optionmenu14title": "AWAY WIN",//passion
+  "optionmenu15title": "DOUBLE CHANCE",//passion
+  "optionmenu16title": "OVER 1.5",//passion
+  "optionmenu17title": "OVER 2.5",//passion
+  "optionmenu18title": "UNDER 3.5",//passion
+  "optionmenu19title": "WIN EITHER HALF",//passion
+  "optionmenu20title": "DRAW NO BET",//passion
+  "optionmenu21title": "BTTS/GG",//passion
+  "optionmenu22title": "HT OVER 0.5",//passion
+  //TFAME
+  "optionmenu23title": "TFAME OVER 1.5 TODAY",//tfame
+  "optionmenu24title": "TFAME OVER 1.5 YESTERDAY",//tfame
+  "optionmenu25title": "TFAME DOUBLE CHANCE TODAY",//tfame
+  "optionmenu26title": "TFAME DOUBLE CHANCE YESTERDAY",//tfame
+  //SUPERBETPRED 
+  "optionmenu27title": "SBP PICKS TODAY",//superbetpred
+  "optionmenu28title": "SBP PICKS YESTERDAY",//superbetpred
+  //LEGITPRED 
+  "optionmenu29title": "LP TOP TODAY",//legitpred
+  "optionmenu30title": "LP TOP YESTERDAY",//legitpred
+  "optionmenu31title": "LP OVER 1.5 TODAY",//legitpred
+  "optionmenu32title": "LP OVER 1.5 YESTERDAY",//legitpred
+  "optionmenu33title": "LP DOUBLE CHANCE TODAY",//legitpred
+  "optionmenu34title": "LP DOUBLE CHANCE YESTERDAY",//legitpred
+  //TFAME
+  "optionmenu35title": "TFAME BTTS/GG TODAY",//tfame
+  "optionmenu36title": "TFAME BTTS/GG YESTERDAY",//tfame
+  //R2BET
+  "optionmenu37title": "PĮCKS DÆÍLY",//r2bet
+  "optionmenu38title": "DØUBLË CHÄNCĖ",//r2bet
+  "optionmenu39title": "BÆNKĘR",//r2bet
+  "optionmenu40title": "ØVĖR 1.5",//r2bet
+  "optionmenu41title": "ØVĖR 2.5",//r2bet
+  "optionmenu42title": "ÜNDĘR 3.5",//r2bet
+  "optionmenu43title": "ẞTTS (Bøth Tęam tö Scörë)",//r2bet
+  "optionmenu44title": "HT 0.5",//r2bet
+  "optionmenu45title": "WĮN EITHËR HÄLF",//r2bet
+  //BTWID
+  "optionmenu46title": "BĘTWÏẞ PÏCKẞ"//bTwid
+  
+  
+  
+  
 
                 
             }
